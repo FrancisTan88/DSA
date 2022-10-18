@@ -186,7 +186,7 @@ def Update(userId, orderId, itemId, itemName, unitPrice, qty, itemId2, itemName2
         
         # remove first row
         element = Press(locate_remove, attribute_xpath)
-        sleep(0.5)
+        sleep(1)
         
         # add new row and fill it 
         element_addNewRow = Press(locate_addNewRow, attribute_xpath)
@@ -270,7 +270,6 @@ if __name__ == "__main__":
     user_id = 'aaaa'
     payment_type = 0
     orderId = Create(user_id, payment_type)
-    # print(id_text)
     
     # fill the query
     Query(orderId)
